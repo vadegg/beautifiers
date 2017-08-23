@@ -33,3 +33,4 @@ export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOROOT/bin
 export GOBIN=$GOPATH/bin
 
+alias lsd='gls --color -h --group-directories-first'

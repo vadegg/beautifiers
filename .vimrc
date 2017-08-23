@@ -53,44 +53,18 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-" Track the engine.
-Plugin 'SirVer/ultisnips'
 
-" Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
 Plugin 'fatih/vim-go'
 let g:go_fmt_autosave = 1
-Bundle 'cespare/vjde'
-Bundle 'nvie/vim-flake8'
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 Bundle 'altercation/vim-colors-solarized'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
 colorscheme lucario
 filetype plugin indent on    " required
 
 "Pathogen for python options
 execute pathogen#infect()
-"vim-flake8 for python options
-"autocmd FileType python map <buffer> <F5> :call Flake8()<CR>
-"let g:pep8_map='whatever' 
-"let g:flake8_show_in_file=0
-"let g:flake8_error_marker='EE'     " set error marker to 'EE'
-"let g:flake8_warning_marker='WW'   " set warning marker to 'WW'
-"let g:flake8_pyflake_marker='WW'     " disable PyFlakes warnings
-"let g:flake8_complexity_marker='WW'  " disable McCabe complexity warnings
-"let g:flake8_naming_marker='WW'      " disable naming warnings
-
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
-let g:no_of_ID_Files=2 
-"let g:srchJdPlugin oc_loc="~/.vim/srchJdoc.sh" 
-au FileType java let browser="links" 
-"au FileType java ! /Applications/Eclipse\ Java.app/Contents/Eclipse/eclimd
-nmap <F4> :call OpenJavadoc()<CR><CR> 
-
 
 set nolist
