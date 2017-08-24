@@ -34,3 +34,4 @@ export PATH=$PATH:$GOROOT/bin
 export GOBIN=$GOPATH/bin
 
 alias lsd='gls --color -h --group-directories-first'
+export PATH=$PATH:~/.scripts
