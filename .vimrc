@@ -54,8 +54,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'fatih/vim-go'
-let g:go_fmt_autosave = 1
+" Plugin 'fatih/vim-go'
+" let g:go_fmt_autosave = 1
 
 Bundle 'altercation/vim-colors-solarized'
 " All of your Plugins must be added before the following line

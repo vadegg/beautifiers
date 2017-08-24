@@ -10,5 +10,5 @@ echo ${arrInfo[1]}
 echo ${arrInfo[2]}
 echo ${arrInfo[3]}
 
-mysql --host=${arrInfo[0]} --user=${arrInfo[1]} --password=${arrInfo[2]} ${arrInfo[3]}
+sudo mysql --host=${arrInfo[0]} --user=${arrInfo[1]} --password=${arrInfo[2]} ${arrInfo[3]}
 
