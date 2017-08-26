@@ -34,4 +34,9 @@ export PATH=$PATH:$GOROOT/bin
 export GOBIN=$GOPATH/bin
 
 alias lsd='gls --color -h --group-directories-first'
+# git fast commands aliased
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
 export PATH=$PATH:~/.scripts
