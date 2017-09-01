@@ -44,6 +44,7 @@ set path+=**
 set term=screen-256color
 set t_Co=256
 command! W w
+set backspace=2
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
