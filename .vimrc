@@ -67,4 +67,18 @@ filetype plugin indent on    " required
 "Pathogen for python options
 execute pathogen#infect()
 
+"netrw settings 
+let g:netrw_banner = 0
+let g:netrw_browse_split = 3
+
 set nolist
+set laststatus=2 
+set statusline=%f       "tail of the filename
+set statusline+=\       "tail of the filename
+set statusline+=%h      "help file flag
+set statusline+=%m      "modified flag
+set statusline+=%r      "read only flag
+set statusline+=%=      "left/right separator
+set statusline+=%c,     "cursor column
+set statusline+=%l/%L   "cursor line/total lines
+set statusline+=%{&paste?'=':'\ '} 
