@@ -1,5 +1,8 @@
 export TERM="xterm-256color"
-export ECLIPSE_HOME="/Applications/Eclipse Java.app/Contents/Eclipse/"
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
 
 [ "$TMUX" ] && export TERM=screen-256color
 
