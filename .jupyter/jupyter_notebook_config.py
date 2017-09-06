@@ -13,7 +13,7 @@
 #c.Application.log_format = '[%(name)s]%(highlevel)s %(message)s'
 
 ## Set the log level by value or name.
-#c.Application.log_level = ’ERROR’
+c.Application.log_level = 0
 
 #------------------------------------------------------------------------------
 # JupyterApp(Application) configuration
@@ -225,7 +225,7 @@ c.NotebookApp.open_browser = False
 #c.NotebookApp.password_required = False
 
 ## The port the notebook server will listen on.
-c.NotebookApp.port = 666
+c.NotebookApp.port = 9876
 
 ## The number of additional ports to try if the specified port is not available.
 #c.NotebookApp.port_retries = 50
@@ -258,7 +258,7 @@ c.NotebookApp.port = 666
 #  
 #  Setting to an empty string disables authentication altogether, which is NOT
 #  RECOMMENDED.
-#c.NotebookApp.token = '<generated>'
+c.NotebookApp.token = ''
 
 ## Supply overrides for the tornado.web.Application that the Jupyter notebook
 #  uses.
