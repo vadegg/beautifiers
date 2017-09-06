@@ -13,7 +13,7 @@
 #c.Application.log_format = '[%(name)s]%(highlevel)s %(message)s'
 
 ## Set the log level by value or name.
-#c.Application.log_level = 30
+#c.Application.log_level = ’ERROR’
 
 #------------------------------------------------------------------------------
 # JupyterApp(Application) configuration
@@ -205,7 +205,7 @@
 #  platform dependent and determined by the python standard library `webbrowser`
 #  module, unless it is overridden using the --browser (NotebookApp.browser)
 #  configuration option.
-#c.NotebookApp.open_browser = True
+c.NotebookApp.open_browser = False
 
 ## Hashed password to use for web authentication.
 #  
@@ -225,7 +225,7 @@
 #c.NotebookApp.password_required = False
 
 ## The port the notebook server will listen on.
-#c.NotebookApp.port = 8888
+#c.NotebookApp.port = 666
 
 ## The number of additional ports to try if the specified port is not available.
 #c.NotebookApp.port_retries = 50
