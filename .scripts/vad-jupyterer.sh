@@ -1,4 +1,5 @@
 #!/usr/local/bin/bash
+cd $1
 tmux kill-session -t jupyter >> /dev/null;
 tmux new-session -d -s jupyter >> /dev/null;
 tmux send-keys -t jupyter "cd $1" Enter
