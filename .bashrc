@@ -42,4 +42,7 @@ alias gs='git status'
 alias ga='git add .'
 alias gc='git commit -m'
 alias gp='git push'
+alias tl='tmux list-sessions'
+alias ta='tmux attach-session -t'
+alias tk='tmux kill-session -t'
 export PATH=$PATH:~/.scripts
