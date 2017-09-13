@@ -8,7 +8,7 @@ _tm_complete ()
     local IFS='
 ';
     local cur="${COMP_WORDS[COMP_CWORD]}"
-    local options="$(tmux -q list-sessions 2>/dev/null | cut -f 1 -d ':') $(tmux ls)"
+    local options="$(tmux -q list-sessions 2>/dev/null | cut -f 1 -d ':')"
     COMPREPLY=( $(compgen -W "${options}" -- ${cur}))
 }
 
