@@ -1,0 +1,10 @@
+*
+!.gitignore
+!.vimrc
+!.bashrc
+!.tmux.conf
+!.scripts/
+!.jupyter/
+!.tmux-completion.bash
+!.git-completion.bash
+!.bash_profile
