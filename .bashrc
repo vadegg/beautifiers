@@ -50,7 +50,7 @@ alias tn='tmux new-session -d -s'
 alias lsa='ls -a'
 export PATH=$PATH:~/.scripts
 gacp() {
-    ga
-    gc "$@"
-    gp
-    }
+    git add .
+    git commit -m "$@"
+    git push
+}
