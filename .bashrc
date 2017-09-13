@@ -37,6 +37,7 @@ export PATH=$PATH:$GOROOT/bin
 export GOBIN=$GOPATH/bin
 
 alias lsd='gls --color -h --group-directories-first'
+alias lsda='lsd -a'
 # git fast commands aliased
 alias gs='git status'
 alias ga='git add .'
@@ -46,4 +47,10 @@ alias tl='tmux list-sessions'
 alias ta='tmux attach-session -t'
 alias tk='tmux kill-session -t'
 alias tn='tmux new-session -d -s'
+alias lsa='ls -a'
 export PATH=$PATH:~/.scripts
+gacp() {
+    ga
+    gc "$@"
+    gp
+    }
