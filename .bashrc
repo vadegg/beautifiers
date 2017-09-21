@@ -1,5 +1,12 @@
 echo "Have a nice work!"
 
+if [[ $(uname) == 'Darwin' ]]
+then
+    LS_COMMAND="gls"
+else
+    LS_COMMAND="ls"
+fi
+
 export TERM="xterm-256color"
 
 [ "$TMUX" ] && export TERM=screen-256color
@@ -22,6 +29,7 @@ RESET="\[$(tput sgr0)\]"
 
 PS1=\
 " ${GRAY}[\A] \
+${BLUE}\u@\h:\
 ${GREEN}\w\n\
 ${GRAY}${BOLD}$?\$ ${RESET}"
 export PS1
@@ -31,13 +39,14 @@ export LSCOLORS=exgxcxdxbxegedabagacaD
 export LS_COLORS='di=34:ln=36:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;1;43'
 
 export PATH=$PATH:~/.scripts
+export PATH=$PATH:/usr/local/pgsql/bin
 
 alias cp="rsync --progress -avz"
-alias ls='gls --color'
-alias lsd='gls --color -h --group-directories-first'
-alias lsa='gls -a --color'
-alias lsda='lsd -a --color'
-alias lsad='lsd -a'
+alias ls="${LS_COMMAND} --color"
+alias lsd="${LS_COMMAND} --color -h --group-directories-first"
+alias lsa="${LS_COMMAND} -a --color"
+alias lsda="lsd -a --color"
+alias lsad="lsd -a"
 rmt () {
     mv "$@" ~/.Trash/
 }
@@ -47,6 +56,7 @@ alias gs='git status'
 alias ga='git add .'
 alias gc='git commit -m'
 alias gp='git push'
+
 gacp() {
     git add .
     git commit -m "$@"
@@ -59,4 +69,3 @@ alias ta='tmux attach-session -t'
 alias tk='tmux kill-session -t'
 alias tn='tmux new-session -d -s'
 
-alias vim="/usr/local/bin/vim"
