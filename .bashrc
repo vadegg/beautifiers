@@ -33,9 +33,10 @@ export LS_COLORS='di=34:ln=36:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30
 export PATH=$PATH:~/.scripts
 
 alias cp="rsync --progress -avz"
+alias ls='gls --color'
 alias lsd='gls --color -h --group-directories-first'
-alias lsa='gls -a'
-alias lsda='lsd -a'
+alias lsa='gls -a --color'
+alias lsda='lsd -a --color'
 alias lsad='lsd -a'
 rmt () {
     mv "$@" ~/.Trash/
