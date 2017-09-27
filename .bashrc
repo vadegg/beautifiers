@@ -69,3 +69,23 @@ alias ta='tmux attach-session -t'
 alias tk='tmux kill-session -t'
 alias tn='tmux new-session -d -s'
 
+cd_and_activate_venv() {
+    deactivate > /dev/null 2>&1
+    REAL_PATH=$(realpath "$@")
+    ACTIVATE_HERE=${REAL_PATH}/.activate_venv.sh
+
+    if [ -f ${ACTIVATE_HERE} ]; then
+        cd $(realpath $@)
+        . ${ACTIVATE_HERE}
+        return
+    fi
+    if [[ $(realpath ~/) == ${REAL_PATH}* ]]; then
+        cd "$@"
+        return
+    else 
+        cd_and_activate_venv $(dirname $(realpath "$@"))
+    fi
+    cd "$@"
+}
+
+alias cdv='cd_and_activate_venv'
