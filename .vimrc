@@ -54,25 +54,12 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-" Plugin 'fatih/vim-go'
-" let g:go_fmt_autosave = 1
-
 Bundle 'altercation/vim-colors-solarized'
+"
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-
-colorscheme lucario
 filetype plugin indent on    " required
 
-"Pathogen for python options
-execute pathogen#infect()
-
-"netrw settings 
-let g:netrw_banner = 0
-let g:netrw_browse_split = 3
-
-set nolist
 set laststatus=2 
 set statusline=%f       "tail of the filename
 set statusline+=\       "tail of the filename
@@ -83,3 +70,15 @@ set statusline+=%=      "left/right separator
 set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=%{&paste?'=':'\ '} 
+
+hi clear
+colorscheme lucario
+autocmd FileType python setlocal colorcolumn=80
+set mousehide
+" Курсор
+set cuc cul
+highlight CursorLine                    cterm=none ctermbg=none
+highlight CursorColumn                  cterm=none ctermbg=none
+filetype plugin on
+filetype indent on
+set nofoldenable

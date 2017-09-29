@@ -48,7 +48,7 @@ alias lsa="${LS_COMMAND} -a --color"
 alias lsda="lsd -a --color"
 alias lsad="lsd -a"
 rmt () {
-    mv "$@" ~/.Trash/
+    mv "$@" ~/.Trash_hidden/
 }
 
 # git fast commands aliased
@@ -89,3 +89,4 @@ cd_and_activate_venv() {
 }
 
 alias cdv='cd_and_activate_venv'
+alias vim='/usr/bin/vim'
