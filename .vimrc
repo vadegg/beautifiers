@@ -7,6 +7,7 @@ set secure
 syntax on
 set nu
 
+map <esc><esc> :set rnu!<cr>
 set wildmenu
 nmap <F3> :tabnew<Space>
 nmap <F2> :tabnext<CR>
@@ -55,6 +56,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Bundle 'altercation/vim-colors-solarized'
+Plugin 'python-mode'
 "
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -70,6 +72,7 @@ set statusline+=%=      "left/right separator
 set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=%{&paste?'=':'\ '} 
+set completeopt-=preview
 
 hi clear
 colorscheme lucario
@@ -82,3 +85,7 @@ highlight CursorColumn                  cterm=none ctermbg=none
 filetype plugin on
 filetype indent on
 set nofoldenable
+let g:pymode_lint_on_write = 0
+let g:pymode_lint_cwindow = 0
+let g:pymode_rope_completion_bind = '<C-n>'
+
